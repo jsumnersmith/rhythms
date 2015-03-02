@@ -1,0 +1,10 @@
+require('./vendor/angular.js');
+require('./vendor/angular-route.js')(window, angular);
+require('./vendor/angular-cookies');
+require('./controllers/MainCtrl.js')();
+require('./controllers/SignupCtrl.js')();
+require('./controllers/LoginCtrl.js')();
+require('./controllers/ProfileCtrl.js')();
+require('./services/UserService.js')();
+require('./appRoutes.js')();
+require('./app.js')();

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Rhythms: Stay on Track</title>
+   <script src="/js/bundle.js"></script>
+   <link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body ng-app="myApp" ng-controller="MainController">
+  <div class="container">
+    <header class="inner">
+      <div class="logo-container">
+        <a class="logo-link" href="/">
+          <img src="/images/logo.png" class="logo">
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="/signup" class="nav-link">Signup</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="/login" class="nav-link">Login</a>
+          </li>
+
+          <!-- If logged in...
+          <li class="nav-list-item">
+            <a href="/profile" class="nav-link">Profile</a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+    <!-- HEADER -->
+
+
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <div class="content" ng-view></div>
+
+  </div>
+</body>
+</html>

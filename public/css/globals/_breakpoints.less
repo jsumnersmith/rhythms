@@ -1,0 +1,45 @@
+/* ----------------------------------------------
+============ Breakpoint Variables ===============
+-----------------------------------------------*/
+
+// Base Variables
+/* -----------------------------------------------*/
+
+@wideUnit: 1600px;
+@fullUnit: 1140px; // this is default width, you shouldn't have to use this unless you're overridding something (??)
+@narrowUnit: 900px;
+@compactUnit: 700px;
+@smallestUnit: 400px;
+
+
+// Media Query Wrappers
+/* -----------------------------------------------*/
+
+@wide: ~'(min-width:@{wideUnit})';
+@full: ~'(max-width:@{wideUnit})';
+@narrow: ~'(max-width:@{narrowUnit})';
+@compact: ~'(max-width:@{compactUnit})';
+@smallest: ~'(max-width:@{smallestUnit})';
+
+@full--only: ~'(min-width:@{narrowUnit} ) and (max-width:@{wideUnit})';
+@narrow--only: ~'(min-width:@{compactUnit}) and (max-width:@{narrowUnit})';
+
+@full--up: ~'(min-width:@{narrowUnit} )';
+@narrow--up: ~'(min-width:@{compactUnit} )';
+
+@ie10--up: ~'(-ms-high-contrast: active), (-ms-high-contrast: none)';
+
+
+// Hide / Show Classes
+/* -----------------------------------------------*/
+
+.show-compact { display: none !important; }
+@media @compact {
+  .hide-compact { display: none !important; }
+  .show-compact { display: block !important; }
+}
+.show-narrow { display: none !important; }
+@media @narrow {
+  .hide-narrow { display: none !important; }
+  .show-narrow { display: block !important; }
+}
